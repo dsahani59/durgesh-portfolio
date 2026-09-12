@@ -1,14 +1,44 @@
 @import "tailwindcss";
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--token-background);
+  color: var(--token-secondary);
+  font-family: var(--font-preahvihear), Arial, Helvetica, sans-serif;
 }
 
 @layer base {
   :root {
-    --background: #ffffff;
+    --token-background: #11071F;
+    --token-primary: #7127BA;
+    --token-secondary: #FFFFFF;
+
+    /* Typography */
+    --token-text-xl: 24px;
+    --token-text-lg: 18px;
+    --token-text-md: 16px;
+    --token-text-sm: 14px;
+
+    --token-text-bold: 700;
+    --token-text-semibold: 600;
+    --token-text-medium: 500;
+    --token-text-regular: 400;
   }
 
+}
+
+@theme inline {
+  --color-primary: var(--token-primary);
+  --color-secondary: var(--token-secondary);
+  --color-background: var(--token-background);
+
+
+  --text-xl: var(--token-text-xl);
+  --text-lg: var(--token-text-lg);
+  --text-md: var(--token-text-md);
+  --text-sm: var(--token-text-sm);
+
+  --text-bold: var(--token-text-bold);
+  --text-semibold: var(--token-text-semibold);
+  --text-medium: var(--token-text-medium);
+  --text-regular: var(--token-text-regular);
 }
