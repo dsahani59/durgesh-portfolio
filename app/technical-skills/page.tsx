@@ -33,16 +33,18 @@ const TechnicalSkills = () => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-6 flex flex-row gap-4 rounded-xl shadow-md mb-6"
+            className="bg-gray-800 p-6 flex flex-row gap-4 rounded-xl shadow-sm border-l-4 border-primary hover:shadow-md transition-shadow duration-200 mb-6"
           >
             <span className=" text-white font-bold text-2xl p-2 rounded-lg">
               {skill.id}
             </span>
             <div className="flex flex-col">
-              <h2 className="text-2xl font-semibold mb-2 text-primary">
+              <h2 className="text-lg md:text-2xl font-semibold mb-2 text-primary">
                 {skill.category}
               </h2>
-              <p className="text-secondary">{skill.skills.join(", ")}</p>
+              <p className="text-base text-secondary">
+                {skill.skills.join(", ")}
+              </p>
             </div>
           </div>
         ))}

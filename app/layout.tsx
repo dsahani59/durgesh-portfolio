@@ -3,6 +3,7 @@ import { Poppins, Preahvihear } from "next/font/google";
 import "./globals.css";
 import Header from "@/component/header";
 import Footer from "@/component/footer";
+import { Toaster } from "sonner";
 
 const preahvihear = Preahvihear({
   weight: "400",
@@ -29,14 +30,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${preahvihear.variable} ${poppins.variable} h-screen overflow-hidden antialiased`}
     >
-      <body className="h-full w-full flex flex-col">
+      <body className="h-full w-full flex flex-col overflow-auto">
         <Header />
-        
-        {/* flex-1 ensures this takes up exactly the remaining height between the header and footer */}
-        <main className="flex-1 overflow-auto flex flex-col w-full">
+        <Toaster/>
+        <main className="flex-1 flex flex-col w-full p-4 md:p-6 pt-26 md:pt-24">
           {children}
         </main>
-        
         <Footer />
       </body>
     </html>

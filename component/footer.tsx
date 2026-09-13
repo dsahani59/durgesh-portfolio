@@ -25,9 +25,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="p-4 flex justify-around items-center">
+    <footer className="p-4 flex flex-col md:flex-row md:justify-around items-center space-y-4 md:space-y-0">
       {/* Left Section */}
-      <div className="flex flex-col space-y-4">
+      <div className="flex flex-col space-y-2 md:space-y-4">
         <span className="text-xl font-bold text-primary">
           Made with ❤️ by Durgesh
         </span>
@@ -39,7 +39,7 @@ const Footer = () => {
 
       {/* Right Section */}
       <div className="flex flex-col space-y-4">
-        <span className="text-xl font-bold text-primary">Connect with me</span>
+        <span className="text-xl font-bold text-primary hidden md:block">Connect with me</span>
         <div className="flex space-x-4 mx-6">
           {SocialLinks.map((link) => (
             <a
