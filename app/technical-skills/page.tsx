@@ -3,33 +3,58 @@ const TechnicalSkills = () => {
     {
       id: 1,
       category: "Programming Languages",
-      skills: ["JavaScript", "TypeScript", "Python", "Java", "C++"],
+      skills: ["JavaScript (ES6+)", "TypeScript", "C++", "C", "HTML5", "CSS."],
     },
     {
-      category: "Frameworks & Libraries",
-      skills: ["React", "Next.js", "Node.js", "Express.js", "Tailwind CSS"],
+      id: 2,
+      category: "Frontend Frameworks & Libraries",
+      skills: [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "PostMan",
+        "Bootstrap 5",
+        "Material UI",
+        "ShadeCn",
+        "TanStack Query",
+        "TanStacK Router.",
+      ],
     },
     {
-      category: "Databases",
-      skills: ["MongoDB", "MySQL", "PostgreSQL"],
+      id: 3,
+      category: "Backend Technology",
+      skills: [
+        "Node.js",
+        "Express.js",
+        "Restful API Design",
+        "WebSockets",
+        "Webhooks",
+        "Redis",
+        "Crons.",
+      ],
     },
     {
+      id: 4,
+      category: "Databases & Cloud",
+      skills: [
+        "MongoDB",
+        "MySQL",
+        "Cloud FireStore",
+        "Firebase Storage",
+        "Cloud Function",
+        "AppHosting.",
+      ],
+    },
+    {
+      id: 5,
       category: "Version Control",
-      skills: ["Git", "GitHub", "GitLab"],
-    },
-    {
-      category: "Cloud Platforms",
-      skills: ["AWS", "Azure", "Google Cloud"],
-    },
-    {
-      category: "Containerization & Orchestration",
-      skills: ["Docker", "Kubernetes"],
+      skills: ["Git", "GitHub", "BitBucket", "GitLab."],
     },
   ];
   return (
     <div className="flex flex-col items-center min-h-screen py-2">
       <h1 className="text-4xl font-bold mb-8">My Technical Skills</h1>
-      <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="w-full max-w-4xl grid grid-cols-1 gap-4">
         {skills.map((skill, index) => (
           <div
             key={index}

@@ -1,26 +1,21 @@
-import { email, phone, linkedin, location } from "@/assets/logos";
+import { email, phone, linkedin } from "@/assets/logos";
 import Image from "next/image";
 const Footer = () => {
   const SocialLinks = [
     {
       name: "Email",
       icon: email,
-      href: "mailto:example@example.com",
+      href: "mailto:dsahani59@hotmail.com",
     },
     {
       name: "Phone",
       icon: phone,
-      href: "tel:+1234567890",
+      href: "tel:+918828977268",
     },
     {
       name: "LinkedIn",
       icon: linkedin,
-      href: "https://www.linkedin.com/in/durgesh",
-    },
-    {
-      name: "Location",
-      icon: location,
-      href: "https://github.com/durgesh",
+      href: "https://www.linkedin.com/in/durgesh-sahani-860817340/",
     },
   ];
 

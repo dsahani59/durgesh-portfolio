@@ -1,23 +1,34 @@
+import { college, dbatu } from "@/assets/image";
 import { GraduationCap } from "lucide-react";
 import Image from "next/image";
 
 const EducationPage = () => {
   const educationDetails = [
     {
-      image: "", // Leave empty to test the fallback icon, or add your path
-      degree: "Bachelor of Science in Information Technology (B.Sc IT)", 
-      institution: "Your University / College Name",
-      duration: "2019 - 2022",
+      image: dbatu,
+      degree: "Bachelor of Technology in Information Technology (B.Tech IT)",
+      institution:
+        "Dr. Babasaheb Ambedkar Technological University, Lonere, Maharashtra",
+      Passout: "2024",
       description:
-        "Focused on software engineering, web development, and database management. Completed major project on [Project Name].",
+        "Specialized in software engineering, data structures, web technologies, and database management. Applied core IT concepts to build scalable applications and practical academic projects.",
     },
     {
-      image: "", 
+      image: college,
       degree: "Higher Secondary Certificate (HSC)",
-      institution: "Your Junior College Name",
-      duration: "2017 - 2019",
+      institution:
+        "Jnan Vikas Mandal Mehta College, Airoli, Mumbai, Maharashtra",
+      Passout: "2018",
       description:
-        "Completed 12th grade with a focus on Computer Science and Mathematics.",
+        "Pursued the Science stream with a primary focus on Physics, Mathematics, and Computer Science. Developed strong analytical and logical reasoning skills.",
+    },
+    {
+      image: "",
+      degree: "Secondary School Certificate (SSC)",
+      institution: "DnyanGanga Secondary School, Kalwa, Thane, Maharashtra",
+      Passout: "2016",
+      description:
+        "Built a solid academic foundation with core coursework in Mathematics and General Sciences. Demonstrated consistent academic performance and a strong aptitude for learning.",
     },
   ];
 
@@ -35,15 +46,15 @@ const EducationPage = () => {
             className="bg-gray-100 dark:bg-gray-800 p-6 flex flex-col sm:flex-row gap-6 rounded-xl shadow-sm border-l-4 border-primary hover:shadow-md transition-shadow duration-200"
           >
             {/* LEFT COLUMN: Image or Icon */}
-            <div className="flex-shrink-0 flex justify-center sm:justify-start">
+            <div className="shrink-0 flex justify-center sm:justify-start">
               {edu.image ? (
                 <Image
                   src={edu.image}
                   alt={edu.institution}
-                  width={128} // Matched to max standard size (md:w-32 is 128px)
-                  height={128}
+                  width={100} // Matched to max standard size (md:w-32 is 128px)
+                  height={100}
                   unoptimized
-                  className="rounded-full border-2 border-primary w-24 h-24 md:w-32 md:h-32 object-cover"
+                  className="rounded-full border-2 border-primary w-24 h-24 md:w-32 md:h-32 object-cover p-2"
                 />
               ) : (
                 <div className="rounded-full border-2 border-primary w-24 h-24 md:w-32 md:h-32 flex items-center justify-center bg-gray-700">
@@ -60,7 +71,7 @@ const EducationPage = () => {
                   {edu.degree}
                 </h3>
                 <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold flex-shrink-0 whitespace-nowrap">
-                  {edu.duration}
+                  {edu.Passout}
                 </span>
               </div>
 

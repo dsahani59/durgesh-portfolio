@@ -3,18 +3,13 @@ import { ExternalLinkIcon } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "Project 1",
+      title: "Echo-Chat",
       description: "Description of Project 1.",
-      link: "#",
+      link: "https://github.com/dsahani59/Echo-Chat",
     },
     {
       title: "Project 2",
       description: "Description of Project 2.",
-      link: "#",
-    },
-    {
-      title: "Project 3",
-      description: "Description of Project 3.",
       link: "#",
     },
   ];
