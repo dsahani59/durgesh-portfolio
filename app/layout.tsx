@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Preahvihear } from "next/font/google";
 import "./globals.css";
-import Header from "@/component/header";
-import Footer from "@/component/footer";
 import { Toaster } from "sonner";
 
 const preahvihear = Preahvihear({
@@ -28,15 +26,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${preahvihear.variable} ${poppins.variable} h-screen overflow-hidden antialiased`}
+      className={`${preahvihear.variable} ${poppins.variable} h-full overflow-hidden antialiased`}
     >
-      <body className="h-full w-full flex flex-col overflow-auto">
-        <Header />
-        <Toaster/>
-        <main className="flex-1 flex flex-col w-full p-4 md:p-6 pt-26 md:pt-24">
+      <body className="m-0 flex h-screen w-screen flex-col overflow-hidden bg-background text-secondary">
+        <Toaster />
+        <main className="flex h-full w-full flex-col overflow-hidden">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );
